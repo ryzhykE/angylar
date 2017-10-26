@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="./lib/angular/angular.min.js"></script>
+		<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>        
+    <script src="hello.js"></script>
+    <script src="services/tovar.js"></script>
+    <script src="script.js"></script>
+    
+    <script src="components/about.js"></script>
+    <script src="components/tovar.js"></script>
+    <script src="components/item.js"></script>
+  </head>
+  
+  <body ng-app="myApp" >
+
+   <form name="form" class="css-form" ng-controller="validateCtrl" novalidate>
+         <div>
+           Username:
+           <input type="text" ng-model="user.name" name="name" username />
+              <span ng-show="form.name.$pending.username">Checking if this name is available...</span>
+              <span ng-show="form.name.$error.username">This username is already taken!</span>
+              <span style="color:red" ng-show="form.user.$dirty && form.user.$invalid">
+              <span ng-show="form.user.$error.required">Username is required.</span>
+            </div>  
+            {{user}}
+            <p>
+            <input type="submit"
+            ng-disabled="form.user.$dirty && form.user.$invalid ||  
+            form.email.$dirty && form.email.$invalid">
+            </p>
+          
+        </form>
+          
+
+
+
+        
+  </body> 
+</html>
