@@ -1,0 +1,18 @@
+<style type="text/css">
+    .css-form input.ng-invalid.ng-dirty {
+      background-color: #FA787E;
+    }
+  
+    .css-form input.ng-valid.ng-dirty {
+      background-color: #78FA89;
+    }
+  </style>
+<form class="css-form">
+Client Name:
+<input name="myName" type="text" ng-model="name"><br>
+Phone number:
+<input name="myPhone" type="text"><br>
+Email:
+<input type="email" ng-model="email"><br>
+<a ng-click="checkout()" ui-sref="products">Checkout</a>
+</form>

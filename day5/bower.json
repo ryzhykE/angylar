@@ -1,0 +1,7 @@
+{
+  "name": "iknow-angular-1.6",
+  "dependencies": {
+    "angular": "1.6",
+    "angular-ui-router": "^1.0.10"
+  }
+}
